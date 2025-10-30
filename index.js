@@ -10,7 +10,7 @@ client.commands = new Collection();
 
 // Creates and loads commands into client
 const commandPath = './commands/utility/'
-const { commandsList } = require('./deploy-commands.js')
+const { commandsList } = require('./commands/utility/commandsList.js')
 
 commandsList.forEach((file) =>  {
     const command = require(`${commandPath}${file}.js`)

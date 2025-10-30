@@ -10,7 +10,7 @@ const token = process.env.token;
 const commands = [];
 
 const commandPath = './commands/utility/'
-const commandsList = ['help', 'game', 'lorem', 'roll', 'die']
+const { commandsList } = require('./commands/utility/commandsList.js')
 
 commandsList.forEach((file) =>  {
     const command = require(`${commandPath}${file}.js`)
@@ -31,4 +31,3 @@ const rest = new REST().setToken(token);
 	}
 })();
 
-module.exports = { commandsList }
